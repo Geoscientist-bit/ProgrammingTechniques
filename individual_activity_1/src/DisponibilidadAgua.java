@@ -24,27 +24,30 @@ public class DisponibilidadAgua {
         System.out.println("------------------------------------------");
         double mayor = disponibilidadAgua[0];
         double menor = disponibilidadAgua[0];
+        int ubi1 = 0, ubi2 = 0;
         for (int i = 0; i < disponibilidadAgua.length; i++) {
             System.out.println("Ubicación " + (i + 1) + ": " + disponibilidadAgua[i] + " litros");
 
             if (mayor < disponibilidadAgua[i]) {
                 mayor = disponibilidadAgua[i];
+                ubi1 = i;
             }
 
             if (menor > disponibilidadAgua[i]) {
                 menor = disponibilidadAgua[i];
+                ubi2 = i;
             }
 
-            
+
             suma += disponibilidadAgua[i];
 
         }
 
         promedio = suma / disponibilidadAgua.length;
 
-        System.out.println("mayor valor es " + mayor);
+        System.out.println("La ubicacion  " +  ubi1 + " presenta la mayor disponibilidad con " + mayor + " litros");
 
-        System.out.println("menor valor es " + menor);
+        System.out.println("La ubicacion  " +  ubi2 + " presenta la menor disponibilidad con " + menor + " litros");
         
         System.out.println("--> El promedio de disponidad de agua es: " + promedio);
 

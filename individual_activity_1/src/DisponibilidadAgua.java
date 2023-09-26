@@ -42,16 +42,18 @@ public class DisponibilidadAgua {
                 ubi2 = i;
             }
 
-            if (disponibilidadAgua[i] >= 15.0) {
-                ubicacionesCumplen.add(i);
-            }
+           
 
             suma += disponibilidadAgua[i];
 
         }
         
         for (int ubicacionCumple : ubicacionesCumplen) {
-            System.out.println(" la ubicacion " +  ubicacionCumple + " puede abastecer mas de 100 personas\n");
+            if (ubicacionCumple >= 15.0) {
+                ubicacionesCumplen.add(ubicacionCumple);
+                System.out.println(" la ubicacion " +  ubicacionCumple + " puede abastecer mas de 100 personas\n");
+            }
+            
             //System.out.println(ubicacionCumple);
         }
 
